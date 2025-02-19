@@ -61,31 +61,15 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Modal 顯示專案詳情
-const modal = document.getElementById("projectModal");
-const modalBody = document.getElementById("modalBody");
-const modalClose = document.querySelector(".modal-close");
+// 監聽所有專案卡片的點擊事件，並根據 data-link 開啟不同的頁面
 const projectCards = document.querySelectorAll(".project-card");
 projectCards.forEach((card) => {
   card.addEventListener("click", () => {
-    const title = card.querySelector("h3").innerText;
-    const description = card.querySelector("p").innerText;
-    const imgSrc = card.querySelector("img").src;
-    modalBody.innerHTML = `
-      <img src="${imgSrc}" alt="${title}" style="width:100%; border-radius:10px; margin-bottom:20px;">
-      <h2>${title}</h2>
-      <p>${description}</p>
-    `;
-    modal.classList.add("active");
+    const link = card.getAttribute("data-link");
+    if (link) {
+      window.open(link, "_blank");
+    }
   });
-});
-modalClose.addEventListener("click", () => {
-  modal.classList.remove("active");
-});
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.remove("active");
-  }
 });
 
 // GSAP 動畫：讓各區塊標題淡入下滑

@@ -1,151 +1,166 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>軟體工程師作品集 - Dark Mode</title>
-  <!-- AOS 動畫函式庫 -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <!-- 自訂 CSS -->
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  <!-- 滾動進度條 -->
-  <div id="progressBar"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>軟體工程師作品集 - Dark Mode</title>
+    <!-- AOS 動畫函式庫 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- 自訂 CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- 滾動進度條 -->
+    <div id="progressBar"></div>
 
-  <!-- 導覽列 -->
-  <nav>
-    <div class="nav-left">
-      <a href="#home" class="nav-link active">首頁</a>
-      <a href="#projects" class="nav-link">作品集</a>
-      <a href="#skills" class="nav-link">技能</a>
-      <a href="#contact" class="nav-link">聯絡我</a>
-    </div>
-  </nav>
+    <!-- 導覽列 -->
+    <nav>
+      <div class="nav-left">
+        <a href="#home" class="nav-link active">首頁</a>
+        <a href="#projects" class="nav-link">作品集</a>
+        <a href="#skills" class="nav-link">技能</a>
+        <a href="#contact" class="nav-link">聯絡我</a>
+      </div>
+    </nav>
 
-  <!-- Hero 區塊 -->
-  <header class="flag" id="home">
-    <div id="particles-js"></div>
-    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-      <h1>我是軟體工程師 Jeffrey LinYu</h1>
-      <p><span id="typed"></span></p>
-      <!-- 將 About 簡述放入 Hero 區塊 -->
-      <p  class="hero-desc">
-        作為一名熱愛軟體工程的人，我持續精進技術、學習最新工具與趨勢。<br>
-        我致力於將每一次挑戰轉化為寶貴的經驗，並期待在未來用更成熟的技術回饋用戶。
-      </p>
-    </div>
-  </header>
+    <!-- Hero 區塊 -->
+    <header class="flag" id="home">
+      <div id="particles-js"></div>
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+        <h1>我是軟體工程師 Jeffrey LinYu</h1>
+        <p><span id="typed"></span></p>
+        <!-- 將 About 簡述放入 Hero 區塊 -->
+        <p class="hero-desc">
+          作為一名熱愛軟體工程的人，我持續精進技術、學習最新工具與趨勢。<br />
+          我致力於將每一次挑戰轉化為寶貴的經驗，並期待在未來用更成熟的技術回饋用戶。
+        </p>
+      </div>
+    </header>
 
-  <!-- Projects 區塊 (無分類) -->
-  <section class="flag" id="projects">
-    <div class="container" data-aos="fade-up" data-aos-duration="1000">
-      <h2 class="section-title">作品集</h2>
-      <div class="projects-grid">
-        <div class="project-card" data-aos="zoom-in" data-aos-duration="1000">
-          <img src="https://via.placeholder.com/600x400" alt="專案1" loading="lazy">
-          <div class="project-overlay">查看專案</div>
-          <div class="project-content">
-            <h3>專案名稱 1</h3>
-            <p>創新的網頁專案，結合先進技術與流暢動畫。</p>
+    <!-- Projects 區塊 (無分類) -->
+    <section class="flag" id="projects">
+      <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="section-title">作品集</h2>
+        <div class="projects-grid">
+          <!-- 教育部 - 我們班的叢林法則 -->
+          <div
+            class="project-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-link="https://github.com/jeffreylinyu/OurClassJungleRules"
+          >
+            <img
+              src="assets/images/OurClassJungleRules.png"
+              alt="ourClassJungleRules"
+              loading="lazy"
+            />
+            <div class="project-overlay">查看專案</div>
+            <div class="project-content">
+              <h3 style="margin-bottom: 8px;">教育部 - 我們班的叢林法則</h3>
+              <p>💙使用 Nuxt 3 + TypeScript 製作的互動式教材平台，該平台透過生動的影片、劇本與互動選擇，幫助學生、家長與教師共同探討主題</p>
+            </div>
           </div>
-        </div>
-        <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
-          <img src="https://via.placeholder.com/600x400" alt="專案2" loading="lazy">
-          <div class="project-overlay">查看專案</div>
-          <div class="project-content">
-            <h3>專案名稱 2</h3>
-            <p>實用的應用程式專案，專注於用戶體驗與互動。</p>
-          </div>
-        </div>
-        <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
-          <img src="https://via.placeholder.com/600x400" alt="專案3" loading="lazy">
-          <div class="project-overlay">查看專案</div>
-          <div class="project-content">
-            <h3>專案名稱 3</h3>
-            <p>設計專案，展現極致美感與創意表現。</p>
+          <!-- 饗點 - 智慧點餐系統 -->
+          <div
+            class="project-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-link="https://github.com/jeffreylinyu/XiangDian"
+          >
+            <img
+              src="assets/images/logo-removebg-e_ZbK5J4.png"
+              alt="布蕾PICK"
+              loading="lazy"
+            />
+            <div class="project-overlay">查看專案</div>
+            <div class="project-content">
+              <h3 style="margin-bottom: 8px;">饗點 - 智慧點餐系統</h3>
+              <p>📱一款基於 Vue 3 + Firebase 開發的智慧點餐平台，整合 LINE LIFF 讓顧客無需下載 APP，也能輕易的點餐與商家操作管理平台。</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Modal 區塊 -->
-  <div class="modal" id="projectModal">
-    <div class="modal-content">
-      <button class="modal-close" aria-label="關閉">&times;</button>
-      <div id="modalBody">
-        <!-- 內容將由 JS 注入 -->
-      </div>
-    </div>
-  </div>
-
-  <!-- Skills 區塊 - 技能分類卡片方式展示 -->
-  <section class="flag" id="skills">
-    <div class="container" data-aos="fade-up" data-aos-duration="1000">
-      <h2 class="section-title">技能專長</h2>
-      <div class="skills-grid">
-        <div class="skill-category" data-category="前端">
-          <h3>前端</h3>
-          <ul>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>HTML/CSS</li>
-          </ul>
-        </div>
-        <div class="skill-category" data-category="後端">
-          <h3>後端</h3>
-          <ul>
-            <li>Node.js</li>
-          </ul>
-        </div>
-        <div class="skill-category" data-category="資料庫">
-          <h3>資料庫</h3>
-          <ul>
-            <li>MySQL</li>
-            <li>MongoDB</li>
-          </ul>
-        </div>
-        <div class="skill-category" data-category="測試">
-          <h3>測試</h3>
-          <ul>
-            <li>Jest</li>
-            <li>Mocha</li>
-          </ul>
-        </div>
-        <div class="skill-category" data-category="CICD">
-          <h3>CICD</h3>
-          <ul>
-            <li>GitLab CI</li>
-            <li>Jenkins</li>
-          </ul>
+    <!-- Skills 區塊 - 技能分類卡片方式展示 -->
+    <section class="flag" id="skills">
+      <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="section-title">技能專長</h2>
+        <div class="skills-grid">
+          <div class="skill-category" data-category="前端">
+            <h3>前端</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>HTML/CSS</li>
+            </ul>
+          </div>
+          <div class="skill-category" data-category="後端">
+            <h3>後端</h3>
+            <ul>
+              <li>Node.js</li>
+            </ul>
+          </div>
+          <div class="skill-category" data-category="資料庫">
+            <h3>資料庫</h3>
+            <ul>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+          <div class="skill-category" data-category="測試">
+            <h3>測試</h3>
+            <ul>
+              <li>Jest</li>
+              <li>Mocha</li>
+            </ul>
+          </div>
+          <div class="skill-category" data-category="CICD">
+            <h3>CICD</h3>
+            <ul>
+              <li>GitLab CI</li>
+              <li>Jenkins</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact 區塊 -->
-  <section class="flag" id="contact" class="parallax" style="background-image: url('https://via.placeholder.com/1920x1080');">
-    <div class="container contact" data-aos="fade-up" data-aos-duration="1000">
-      <h2 class="section-title" style="color: #fff;">聯絡我</h2>
-      <form>
-        <input type="text" placeholder="您的姓名" required>
-        <input type="email" placeholder="電子郵件" required>
-        <textarea rows="5" placeholder="訊息內容" required></textarea>
-        <button class="btn-3d" type="submit">送出訊息</button>
-      </form>
-    </div>
-  </section>
+    <!-- Contact 區塊 -->
+    <section
+      class="flag"
+      id="contact"
+      class="parallax"
+      style="background-image: url('https://via.placeholder.com/1920x1080')"
+    >
+      <div
+        class="container contact"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <h2 class="section-title" style="color: #fff">聯絡我</h2>
+        <form>
+          <input type="text" placeholder="您的姓名" required />
+          <input type="email" placeholder="電子郵件" required />
+          <textarea rows="5" placeholder="訊息內容" required></textarea>
+          <button class="btn-3d" type="submit">送出訊息</button>
+        </form>
+      </div>
+    </section>
 
-  <!-- 外部函式庫 -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-  <!-- 自訂 JS -->
-  <script src="js/main.js"></script>
-</body>
+    <!-- 外部函式庫 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <!-- 自訂 JS -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
