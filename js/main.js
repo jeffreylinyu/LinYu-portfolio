@@ -3,7 +3,7 @@ AOS.init();
 
 // 初始化 Typed.js
 var typed = new Typed("#typed", {
-  strings: ["未來", "創意", "突破"],
+  strings: ["解決問題", "主動積極", "團隊協作與溝通", "持續學習", "責任感"],
   typeSpeed: 100,
   backSpeed: 50,
   backDelay: 2000,
@@ -50,7 +50,7 @@ window.addEventListener("scroll", () => {
   progressBar.style.width = scrollPercent + "%";
 
   // 導覽列連結高亮
-  document.querySelectorAll("section").forEach((section) => {
+  document.querySelectorAll(".flag").forEach((section) => {
     const rect = section.getBoundingClientRect();
     const navLink = document.querySelector(`nav a[href="#${section.id}"]`);
     if (rect.top <= 150 && rect.bottom >= 150) {
