@@ -256,13 +256,13 @@ section {
 /* 文字 3D 效果 */
 .skill-category h3,
 .skill-category ul {
-  transform: perspective(500px) translateZ(5px);
+  transform: perspective(500px) translateZ(10px);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
 }
 .skill-category:hover h3,
 .skill-category:hover ul {
-  transform: perspective(500px) translateZ(10px);
+  transform: perspective(500px) translateZ(25px);
 }
 .skill-category h3 {
   font-size: 1.5rem;
