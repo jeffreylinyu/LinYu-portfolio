@@ -241,6 +241,13 @@ section {
   padding: 5px 0;
   border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
 }
+/* 技能類別標題的小標提示 */
+.skill-category h3 .skill-level {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: normal;
+  margin-left: 8px;
+}
 /* 聯絡區塊 */
 .contact {
   max-width: 800px;

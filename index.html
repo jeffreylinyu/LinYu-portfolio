@@ -105,7 +105,9 @@
             />
             <div class="project-overlay">查看專案</div>
             <div class="project-content">
-              <h3 style="margin-bottom: 8px">LinYu-Portfolio - 個人作品集(本網站)</h3>
+              <h3 style="margin-bottom: 8px">
+                LinYu-Portfolio - 個人作品集(本網站)
+              </h3>
               <p>
                 🌟 一個展示我的技能與專案的個人作品集網站，擁有精美的 UI
                 設計與動態動畫，並透過 GitHub Pages 部署。
@@ -116,44 +118,47 @@
       </div>
     </section>
 
-    <!-- Skills 區塊 - 技能分類卡片方式展示 -->
+    <!-- Skills 區塊 -->
     <section class="flag" id="skills">
       <div class="container" data-aos="fade-up" data-aos-duration="1000">
         <h2 class="section-title">技能專長</h2>
         <div class="skills-grid">
           <div class="skill-category" data-category="前端">
-            <h3>前端</h3>
+            <h3>前端<span class="skill-level">（主要專長）</span></h3>
             <ul>
-              <li>JavaScript</li>
-              <li>React</li>
-              <li>HTML/CSS</li>
+              <li>Vue 2/3、Nuxt</li>
+              <li>React、Next</li>
+              <li>TypeScript</li>
             </ul>
           </div>
           <div class="skill-category" data-category="後端">
-            <h3>後端</h3>
+            <h3>後端<span class="skill-level">（具經驗）</span></h3>
             <ul>
-              <li>Node.js</li>
+              <li>Java、Spring Boot</li>
+              <li>C#、.NET Core</li>
             </ul>
           </div>
           <div class="skill-category" data-category="資料庫">
-            <h3>資料庫</h3>
+            <h3>資料庫<span class="skill-level">（具經驗）</span></h3>
             <ul>
               <li>MySQL</li>
-              <li>MongoDB</li>
             </ul>
           </div>
-          <div class="skill-category" data-category="測試">
-            <h3>測試</h3>
+          <div class="skill-category" data-category="開發工具">
+            <h3>開發工具</h3>
             <ul>
-              <li>Jest</li>
-              <li>Mocha</li>
+              <li>Git</li>
+              <li>Docker</li>
+              <li>VS Code</li>
+              <li>IntelliJ IDEA</li>
+              <li>Cursor</li>
             </ul>
           </div>
-          <div class="skill-category" data-category="CICD">
-            <h3>CICD</h3>
+          <div class="skill-category" data-category="其他">
+            <h3>其他技能</h3>
             <ul>
-              <li>GitLab CI</li>
-              <li>Jenkins</li>
+              <li>CI/CD</li>
+              <li>Unit Testing</li>
             </ul>
           </div>
         </div>
@@ -161,11 +166,7 @@
     </section>
 
     <!-- Contact 區塊 -->
-    <section
-      class="flag"
-      id="contact"
-      class="parallax"
-    >
+    <section class="flag" id="contact" class="parallax">
       <div
         class="container contact"
         data-aos="fade-up"
@@ -175,7 +176,12 @@
         <form id="contactForm" onsubmit="handleSubmit(event)">
           <input type="text" name="name" placeholder="您的姓名" required />
           <input type="email" name="email" placeholder="電子郵件" required />
-          <textarea name="message" rows="5" placeholder="訊息內容" required></textarea>
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="訊息內容"
+            required
+          ></textarea>
           <input type="hidden" name="date" id="contact_date" />
           <button class="btn-3d" type="submit">送出訊息</button>
         </form>
