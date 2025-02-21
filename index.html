@@ -173,10 +173,11 @@
         data-aos-duration="1000"
       >
         <h2 class="section-title" style="color: #fff">聯絡我</h2>
-        <form>
-          <input type="text" placeholder="您的姓名" required />
-          <input type="email" placeholder="電子郵件" required />
-          <textarea rows="5" placeholder="訊息內容" required></textarea>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <input type="text" name="name" placeholder="您的姓名" required />
+          <input type="email" name="email" placeholder="電子郵件" required />
+          <textarea name="message" rows="5" placeholder="訊息內容" required></textarea>
+          <input type="hidden" name="date" id="contact_date" />
           <button class="btn-3d" type="submit">送出訊息</button>
         </form>
       </div>
@@ -188,6 +189,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      emailjs.init("CWHs57PTKDk8BEpSQ"); // 替換成您的 public key
+    </script>
     <!-- 自訂 JS -->
     <script src="js/main.js"></script>
   </body>

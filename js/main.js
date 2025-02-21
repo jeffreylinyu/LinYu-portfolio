@@ -88,3 +88,48 @@ VanillaTilt.init(document.querySelectorAll(".skill-category"), {
   glare: true,
   "max-glare": 0.2,
 });
+
+function handleSubmit(event) {
+    event.preventDefault();
+    
+    // 設置當前日期時間
+    const now = new Date();
+    const dateStr = now.toLocaleString('zh-TW', { 
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+    });
+    
+    // 將日期時間設置到隱藏的input中
+    document.getElementById('contact_date').value = dateStr;
+    
+    // 獲取提交按鈕
+    const submitButton = event.target.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    
+    // 禁用按鈕並更改文字
+    submitButton.disabled = true;
+    submitButton.textContent = '發送中...';
+
+    emailjs.sendForm(
+        'service_jcqhx6f',   // 替換成您的 EmailJS service ID
+        'template_otidkw1',  // 替換成您的 EmailJS template ID
+        event.target
+    )
+    .then(function() {
+        alert('感謝您的留言，我們將盡快回覆您的訊息。');
+        event.target.reset(); // 清空表單
+    })
+    .catch(function(error) {
+        console.error('發送失敗：', error);
+        alert('發送失敗，請稍後再試。');
+    })
+    .finally(function() {
+        // 恢復按鈕狀態
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+    });
+}
