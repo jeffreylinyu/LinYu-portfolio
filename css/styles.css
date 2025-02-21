@@ -242,45 +242,95 @@ section {
   border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
 }
 /* 聯絡區塊 */
+.contact {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(30, 30, 30, 0.9);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
 .contact form {
   max-width: 600px;
   margin: 0 auto;
+  display: grid;
+  gap: 20px;
 }
+
 .contact input,
 .contact textarea {
   width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  background: #1e1e1e;
-  border: 1px solid #333;
-  border-radius: 5px;
+  padding: 15px 20px;
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
   font-size: 1rem;
   color: var(--text-color);
+  transition: all 0.3s ease;
 }
+
+.contact input:hover,
+.contact textarea:hover {
+  border-color: rgba(0, 173, 181, 0.5);
+}
+
 .contact input:focus,
 .contact textarea:focus {
   outline: none;
-  box-shadow: 0 0 8px var(--btn-glow);
+  border-color: var(--btn-glow);
+  box-shadow: 0 0 15px rgba(0, 173, 181, 0.3);
+  background: rgba(30, 30, 30, 0.9);
 }
+
+.contact textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
 .contact button {
   width: 100%;
   padding: 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   background: linear-gradient(45deg, var(--btn-start), var(--btn-end));
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s, text-shadow 0.3s;
-  box-shadow: 0 5px 15px rgba(0, 173, 181, 0.4),
-    inset 0 -3px 6px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 173, 181, 0.4);
 }
+
 .contact button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 173, 181, 0.8),
-    inset 0 -3px 6px rgba(0, 0, 0, 0.5), 0 0 10px var(--btn-glow);
-  text-shadow: 0 0 8px var(--btn-glow);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 173, 181, 0.6);
 }
+
+.contact button:active {
+  transform: translateY(1px);
+}
+
+.contact button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+  .contact {
+    padding: 30px 20px;
+  }
+  
+  .contact input,
+  .contact textarea,
+  .contact button {
+    padding: 12px 15px;
+  }
+}
+
 /* 響應式 */
 @media (max-width: 768px) {
   header h1 {
